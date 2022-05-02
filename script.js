@@ -25,13 +25,27 @@ console.log(power(3,4))
 
 //Task #3
 
+// const calculator = (a, b) => {
+//     if (b !== 0) {
+//         a++
+//         b--
+//         return calculator(a, b)
+//     }   else {
+//         return a
+//     }
+// }
+
 const calculator = (a, b) => {
-    if (b !== 0) {
-        a++
-        b--
-        return calculator(a, b)
-    }   else {
-        return a
+    if (a >= 0 && Number.isInteger(a) && b >= 0 && Number.isInteger(b)) {
+        if (b !== 0) {
+            a++
+            b--
+            return calculator(a, b)
+        }   else {
+            return a
+        }
+    }   else  {
+        return "Error! Enter positive integers!"
     }
 }
 
